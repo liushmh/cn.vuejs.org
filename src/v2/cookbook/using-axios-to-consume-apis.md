@@ -23,7 +23,7 @@ new Vue({
   mounted () {
     axios
       .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => (this.info = response))
+      .then(response => {this.info = response})
   }
 })
 ```
@@ -50,7 +50,7 @@ new Vue({
 ```js
 axios
   .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-  .then(response => (this.info = response.data.bpi))
+  .then(response => {this.info = response.data.bpi})
 ```
 
 <p data-height="200" data-theme-id="32763" data-slug-hash="6100b10f1b4ac2961208643560ba7d11" data-default-tab="result" data-user="Vue" data-embed-version="2" data-pen-title="Second Step Axios and Vue" class="codepen">在 <a href="https://codepen.io">CodePen</a> 查看 Vue (<a href="https://codepen.io/Vue">@Vue</a>)的 <a href="https://codepen.io/team/Vue/pen/6100b10f1b4ac2961208643560ba7d11/">axios 和 Vue：第二步</a>。 </p>
@@ -97,7 +97,7 @@ filters: {
 ```js
 axios
   .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-  .then(response => (this.info = response.data.bpi))
+  .then(response => {this.info = response.data.bpi})
   .catch(error => console.log(error))
 ```
 
